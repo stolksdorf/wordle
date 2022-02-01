@@ -231,7 +231,9 @@ const Main = comp(function(){
 	};
 
 	const win = ()=>{
-		Party.confetti(document.querySelector('.row.current'))
+		Party.confetti(document.querySelector('.row.current'), {
+			count: 100
+		})
 		setShowResults(true);
 		setHasWon(true);
 	}
