@@ -1,0 +1,16 @@
+{
+  "name": "wordle",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.script.js",
+    "dev": "node scripts/build.script.js --dev"
+  },
+  "keywords": [],
+  "author": "stolksdorf <scott.tolksdorf@gmail.com> (https://stolksdorf.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
