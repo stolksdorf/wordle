@@ -900,7 +900,7 @@ const Generator = comp(function(){
 	let code = btoa(word + (hint ? '|' + hint : ''));
 	let url = '';
 	if(typeof window !== 'undefined'){
-		url = window.location.origin + '?' + code;
+		url = window.location.origin + window.location.pathname + '?' + code;
 	}
 	return x`<div class='generator'>
 		<label>Word</label>
