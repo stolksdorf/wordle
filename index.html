@@ -178,6 +178,7 @@ body{
 }
 .Main{
 	position:relative;
+	padding-bottom:2em;
 }
 .Main aside{
 	text-align:right;
@@ -188,38 +189,8 @@ body{
 .Main aside button{
 	display:block;
 }
-.Main aside textarea{
-	background-color:white;
-}
-.Main aside .generator{
-	text-align:left;
-	width:250px;
-	margin-bottom:1em;
-}
-.Main aside .generator input{
-	background-color:white;
-	width:100%;
-	border-color:black;
-	color:black;
-}
-.Main aside .generator label{
-	font-size:0.75em;
-	display:block;
-}
-.Main aside .generator textarea{
-	width:100%;
-	resize:none;
-	color:black;
-}
-.Main aside .generator a{
-	color:blue;
-	font-size:0.8em;
-}
-.Main aside textarea.results{
-	resize:none;
-	text-align:right;
-	border:none;
-	height:14em;
+.Main .Keyboard{
+	margin-top:1em;
 }
 .Main .content{
 	text-align:center;
@@ -253,16 +224,125 @@ body{
 .Main .row .letter.n{
 	background-color:var(--grey);
 	color:white;
+}
+.Keyboard{
+	position:relative;
+}
+.Keyboard .kb_row{
+	justify-content:center;
+	display:flex;
+}
+.Keyboard .backspace{
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:11em;
+}
+.Keyboard .enter{
+	position:absolute;
+	top:4em;
+	left:50%;
+	margin-left:11em;
+}
+.Keyboard .key{
+	font-size:2em;
+	cursor:pointer;
+	border:1px solid black;
+	width:2em;
+	height:2em;
+	line-height:2em;
+}
+.Keyboard .key.y{
+	background-color:var(--green);
+	color:white;
+}
+.Keyboard .key.c{
+	background-color:var(--yellow);
+	color:white;
+}
+.Keyboard .key.n{
+	background-color:var(--grey);
+	color:white;
+}
+.Generator{
+	text-align:left;
+	width:250px;
+	margin-bottom:1em;
+}
+.Generator input{
+	background-color:white;
+	width:100%;
+	border-color:black;
+	color:black;
+}
+.Generator label{
+	font-size:0.75em;
+	display:block;
+}
+.Generator textarea{
+	width:100%;
+	resize:none;
+	color:black;
+	background-color:white;
+}
+.Generator a{
+	color:blue;
+	font-size:0.8em;
+}
+.Share{
+	resize:none;
+	text-align:right;
+	border:none;
+	background-color:white;
+	height:14em;
 }</style>
 </head>
 <body><div class='Main'>
 		<div class='content'>
 			
-			
-			<div class=row current>
+			<div class='rows'>
+				
+				<div class=row current>
 		
 	</div>
-			
+				
+			</div>
+			<div class='Keyboard'>
+		<div class='kb_row'>
+				<div class=key  onclick=>q</div>
+<div class=key  onclick=>w</div>
+<div class=key  onclick=>e</div>
+<div class=key  onclick=>r</div>
+<div class=key  onclick=>t</div>
+<div class=key  onclick=>y</div>
+<div class=key  onclick=>u</div>
+<div class=key  onclick=>i</div>
+<div class=key  onclick=>o</div>
+<div class=key  onclick=>p</div>
+			</div>
+<div class='kb_row'>
+				<div class=key  onclick=>a</div>
+<div class=key  onclick=>s</div>
+<div class=key  onclick=>d</div>
+<div class=key  onclick=>f</div>
+<div class=key  onclick=>g</div>
+<div class=key  onclick=>h</div>
+<div class=key  onclick=>j</div>
+<div class=key  onclick=>k</div>
+<div class=key  onclick=>l</div>
+			</div>
+<div class='kb_row'>
+				<div class=key  onclick=>z</div>
+<div class=key  onclick=>x</div>
+<div class=key  onclick=>c</div>
+<div class=key  onclick=>v</div>
+<div class=key  onclick=>b</div>
+<div class=key  onclick=>n</div>
+<div class=key  onclick=>m</div>
+			</div>
+		<div class='backspace key' onclick=>ᐊ</div>
+		<div class='enter key' onclick=>🗸</div>
+	</div>
 		</div>
 
 		<aside>
@@ -743,7 +823,171 @@ global.__Modules["1p96gqg"]={func:function(module, exports, global, __filename, 
 },deps:{},fn:'libs/zenburn.css',dn:'libs', root:'..'};
 global.__Modules["htofee"]={func:function(module, exports, global, __filename, __dirname, __root, require){module.exports=['heart','think','proud','radio','bases','arise','rival','focus','drove','lewis','pride','taxes','aware','quite','shelf','roger','jimmy','table','glass','slide','spoke','broke','doubt','inner','noise','alarm','trust','apart','judge','event','roman','occur','house','serve','sight','leave','early','chain','mount','calif','chase','scale','right','share','their','fresh','funny','drill','urban','adult','empty','faith','tries','rough','alone','reach','suite','today','actor','point','light','fixed','fleet','truth','whole','could','ought','avoid','worth','alive','never','field','input','visit','civil','great','again','north','clear','metal','aside','world','doing','while','usual','plane','among','storm','drama','coast','lunch','dozen','grade','usage','dealt','mouse','steam','virus','booth','spare','stage','layer','brown','lease','robin','minor','tired','thing','mayor','apply','vital','sorry','level','prime','trend','prove','shall','claim','build','plain','hence','times','chose','order','every','after','jones','enemy','eager','pound','fluid','route','count','fully','drink','fruit','eight','under','earth','flash','catch','shirt','sharp','false','stuck','upset','woman','sized','pilot','green','water','dying','bench','terry','buyer','river','threw','dance','music','limit','above','learn','would','paint','block','touch','draft','maria','cross','thank','lying','lower','major','stuff','forum','track','force','dress','wrote','spent','often','going','seven','mixed','being','equal','entry','given','ocean','smith','baker','panel','power','strip','class','local','cycle','royal','bring','pitch','phase','which','round','giant','yield','depth','basic','trade','sheet','extra','sense','blood','union','daily','undue','photo','press','ready','chair','stake','tough','motor','final','drive','bread','quick','loose','state','legal','close','Angle','fifth','study','laugh','beach','store','grass','enter','train','birth','brief','theft','joint','error','enjoy','exact','proof','clock','apple','match','nurse','scene','along','theme','mouth','large','gross','plate','breed','clean','guest','child','tight','floor','wheel','spend','anger','paper','ratio','known','cheap','fight','month','cream','rural','array','about','still','stock','shoot','score','party','peter','later','start','chart','quiet','grace','shape','truly','guess','wrong','cause','sound','moral','queen','fraud','frame','angry','unity','chest','forty','refer','grown','break','logic','piece','dream','human','voice','topic','those','lives','super','sleep','front','below','movie','frank','trial','fault','worry','alert','coach','range','where','prior','group','album','begin','style','board','sixth','elite','admit','began','shown','texas','laser','guide','price','thick','grant','broad','carry','first','there','maker','ahead','treat','crime','black','brain','peace','three','these','solid','chief','cover','index','teach','speak','write','court','upper','agent','prize','novel','staff','twice','south','shock','value','agree','stone','alter','taste','speed','arena','wound','noted','title','china','plant','teeth','issue','crowd','heavy','maybe','might','solve','minus','money','blame','basis','newly','stood','stand','alike','crown','curve','asset','boost','needs','forth','check','grand','globe','happy','begun','worst','death','night','label','sixty','stick','adopt','magic','click','scope','raise','argue','found','billy','march','audit','japan','until','print','brand','waste','tried','worse','ideal','watch','crash','third','smoke','sweet','total','fifty','whose','truck','smile','since','bound','steel','women','place','meant','valid','other','sport','allow','fiber','henry','phone','blind','short','horse','youth','exist','offer','abuse','smart','badly','award','shift','harry','tower','acute','guard','debut','media','built','story','dated','small','model','sugar','least','cable','shell','image','drawn','audio','rapid','craft','white','hotel','split','taken','lucky','space','throw','delay','skill','video','links','young'];
 },deps:{},fn:'client/main/5_word_list.js',dn:'client/main', root:'../..'};
+<<<<<<< 874276bd8dd8b84f00ca98e6b0d1bc83fe6b9967
 global.__Modules["dr6ibf"]={func:function(module, exports, global, __filename, __dirname, __root, require){const {x, cx, comp, css} = require('../../libs');
+=======
+global.__Modules["-1loiebb"]={func:function(module, exports, global, __filename, __dirname, __root, require){const {x, cx, comp, css} = require('../../libs');
+
+global.css.Generator = css`
+	.Generator{
+		text-align: left;
+		width: 250px;
+		//border: 1px solid red;
+		margin-bottom: 1em;
+
+		input{
+			background-color: white;
+			width: 100%;
+			border-color: black;
+			color: black;
+		}
+
+		label{
+			//font-weight:800;
+			font-size: 0.75em;
+			//text-transform:uppercase;
+			display: block;
+		}
+
+		textarea{
+			width: 100%;
+			resize: none;
+			color: black;
+			background-color: white;
+		}
+
+		a{
+			color: blue;
+			font-size:0.8em;
+		}
+	}
+`;
+
+const Generator = comp(function(){
+	const [word, setWord] = this.useState('');
+	const [hint, setHint] = this.useState('');
+
+	let code = btoa(word + (hint ? '|' + hint : ''));
+	let url = '';
+	if(typeof window !== 'undefined'){
+		url = window.location.origin + window.location.pathname + '?' + code;
+	}
+	return x`<div class='Generator'>
+		<label>Word</label>
+		<input type='text' oninput=${(evt)=>setWord(evt.target.value)} value=${word}></input>
+		<label>Title</label>
+		<textarea oninput=${(evt)=>setHint(evt.target.value)} value=${hint}></textarea>
+		<a href=${url}>${url}</a>
+	</div>`
+});
+
+module.exports = Generator;
+},deps:{"../../libs":"-1b7f7g0"},fn:'client/main/generator.js',dn:'client/main', root:'../..'};
+global.__Modules["17og7jj"]={func:function(module, exports, global, __filename, __dirname, __root, require){const {x, cx, comp, css} = require('../../libs');
+
+global.css.Keyboard = css`
+	.Keyboard{
+		position: relative;
+		.kb_row{
+			justify-content: center;
+			display:flex;
+
+
+		}
+
+		.backspace{
+			position: absolute;
+			top: 0px;
+			left:50%;
+			margin-left:11em;
+		}
+		.enter{
+			position: absolute;
+			top: 4em;
+			left:50%;
+			margin-left:11em;
+		}
+
+		.key{
+			font-size:2em;
+			cursor:pointer;
+			border: 1px solid black;
+			width: 2em;
+			height: 2em;
+			line-height:2em;
+
+			&.y{
+				background-color: var(--green);
+				color: white;
+			}
+			&.c{
+				background-color: var(--yellow);
+				color: white;
+			}
+			&.n{
+				background-color: var(--grey);
+				color: white;
+			}
+		}
+	}
+`;
+
+const Keys = `qwertyuiop
+asdfghjkl
+zxcvbnm`;
+
+const Keyboard = comp(function(guesses, onPress){
+
+	let lookup = {};
+	guesses.map(([word, status])=>{
+		status.split('').map((code, idx)=>{
+			const letter = word[idx];
+			if(lookup[letter] !== 'y') lookup[letter] = code;
+		})
+	})
+
+	return x`<div class='Keyboard'>
+		${Keys.split('\n').map(line=>{
+			return x`<div class='kb_row'>
+				${line.split('').map(key=>{
+					return x`<div class=${cx('key', lookup[key]||'')} onclick=${()=>onPress(key)}>${key}</div>`;
+				})}
+			</div>`;
+		})}
+		<div class='backspace key' onclick=${()=>onPress('Backspace')}>ᐊ</div>
+		<div class='enter key' onclick=${()=>onPress('Enter')}>🗸</div>
+	</div>`;
+});
+
+module.exports = Keyboard;
+},deps:{"../../libs":"-1b7f7g0"},fn:'client/main/keyboard.js',dn:'client/main', root:'../..'};
+global.__Modules["j7d0de"]={func:function(module, exports, global, __filename, __dirname, __root, require){const {x, cx, comp, css} = require('../../libs');
+
+global.css.Share = css`
+	.Share{
+		resize: none;
+		text-align: right;
+		border: none;
+		background-color: white;
+		height:14em;
+	}
+`;
+
+const getEmojiResult = (guesses)=>{
+	const mapping = {y : '🟩',c : '🟨',n : '⬜'};
+	return guesses.map(([word, status])=>{
+		return status.split('').map(code=>mapping[code]).join('');
+	}).join('\n');
+};
+
+
+const Share = comp(function(guesses){
+	return x`<textarea class='Share'>${getEmojiResult(guesses)}</textarea>`;
+});
+module.exports = Share;
+},deps:{"../../libs":"-1b7f7g0"},fn:'client/main/share.js',dn:'client/main', root:'../..'};
+global.__Modules["-f0vava"]={func:function(module, exports, global, __filename, __dirname, __root, require){const {x, cx, comp, css} = require('../../libs');
+>>>>>>> Added keyboard
 
 const Party = require('./party.js');
 
@@ -761,6 +1005,7 @@ global.css.Main = css`
 
 	.Main{
 		position: relative;
+		padding-bottom: 2em;
 
 		aside{
 			text-align: right;
@@ -771,50 +1016,10 @@ global.css.Main = css`
 			button{
 				display: block;
 			}
+		}
 
-			textarea{
-				background-color: white;
-			}
-
-			.generator{
-				text-align: left;
-				width: 250px;
-				//border: 1px solid red;
-				margin-bottom: 1em;
-
-				input{
-					background-color: white;
-					width: 100%;
-					border-color: black;
-					color: black;
-				}
-
-				label{
-					//font-weight:800;
-					font-size: 0.75em;
-					//text-transform:uppercase;
-					display: block;
-				}
-
-				textarea{
-					width: 100%;
-					resize: none;
-					color: black;
-				}
-
-				a{
-					color: blue;
-					font-size:0.8em;
-				}
-			}
-
-			textarea.results{
-				resize: none;
-				text-align: right;
-				border: none;
-
-				height:14em;
-			}
+		.Keyboard{
+			margin-top: 1em;
 		}
 
 
@@ -892,26 +1097,9 @@ const getTargetFromURL = ()=>{
 };
 
 
-
-const Generator = comp(function(){
-	const [word, setWord] = this.useState('');
-	const [hint, setHint] = this.useState('');
-
-	let code = btoa(word + (hint ? '|' + hint : ''));
-	let url = '';
-	if(typeof window !== 'undefined'){
-		url = window.location.origin + window.location.pathname + '?' + code;
-	}
-	return x`<div class='generator'>
-		<label>Word</label>
-		<input type='text' oninput=${(evt)=>setWord(evt.target.value)} value=${word}></input>
-		<label>Title</label>
-		<textarea oninput=${(evt)=>setHint(evt.target.value)} value=${hint}></textarea>
-		<a href=${url}>${url}</a>
-	</div>`
-
-
-});
+const Keyboard = require('./keyboard.js');
+const Generator = require('./generator.js');
+const Share = require('./share.js');
 
 const getEmojiResult = (guesses)=>{
 	const mapping = {y : '🟩',c : '🟨',n : '⬜'};
@@ -964,16 +1152,19 @@ const Main = comp(function(){
 
 	const handleKey = (evt)=>{
 		if(evt.ctrlKey) return;
-		if(hasWon) return;
-
-		if(evt.key == 'Enter' && current.length == target.length){
-			addGuess(current);
-		}else if(evt.key == 'Backspace'){
-			setCurrent(current.slice(0, -1));
-		}else if(evt.key.length === 1 && current.length < target.length){
-			setCurrent(current + evt.key.toLowerCase());
-		}
+		addKeyPress(evt.key);
 	};
+
+	const addKeyPress = (key)=>{
+		if(hasWon) return;
+		if(key == 'Enter' && current.length == target.length){
+			addGuess(current);
+		}else if(key == 'Backspace'){
+			setCurrent(current.slice(0, -1));
+		}else if(key.length === 1 && current.length < target.length){
+			setCurrent(current + key.toLowerCase());
+		}
+	}
 
 	const win = ()=>{
 		Party.confetti(document.querySelector('.row.current'), {
@@ -988,9 +1179,12 @@ const Main = comp(function(){
 	return x`<div class='Main'>
 		<div class='content'>
 			${hint && x`<h3 class='hint'>${hint}</h3>`}
-			${guesses.map(([word, status])=>Row(target.length, word, status))}
-			${Row(target.length, current, [], 'current')}
-			${times(target.length - guesses.length, ()=>Row(target.length, ''))}
+			<div class='rows'>
+				${guesses.map(([word, status])=>Row(target.length, word, status))}
+				${Row(target.length, current, [], 'current')}
+				${times(target.length - guesses.length, ()=>Row(target.length, ''))}
+			</div>
+			${Keyboard(guesses, addKeyPress)}
 		</div>
 
 		<aside>
@@ -998,13 +1192,17 @@ const Main = comp(function(){
 			${showGenerator && Generator()}
 
 			<button onclick=${()=>setShowResults(!showResults)}>${showResults ? 'Hide' : 'Show'} Results</button>
-			${showResults && x`<textarea class='results'>${getEmojiResult(guesses)}</textarea>`}
+			${showResults && Share(guesses)}
 		</aside>
 	</div>`;
 });
 
 module.exports = Main;
+<<<<<<< 874276bd8dd8b84f00ca98e6b0d1bc83fe6b9967
 },deps:{"../../libs":"n6ivmt","./party.js":"-v8i3u","../../libs/reset.css":"j34n9i","../../libs/zenburn.css":"1p96gqg","./5_word_list.js":"htofee"},fn:'client/main/main.page.js',dn:'client/main', root:'../..'};
+=======
+},deps:{"../../libs":"-1b7f7g0","./party.js":"-19mcmvj","../../libs/reset.css":"-1lpc4bo","../../libs/zenburn.css":"-h5t4b4","./5_word_list.js":"1skkhfk","./keyboard.js":"17og7jj","./generator.js":"-1loiebb","./share.js":"j7d0de"},fn:'client/main/main.page.js',dn:'client/main', root:'../..'};
+>>>>>>> Added keyboard
 	const req = (id)=>{
 		const mod = global.__Modules[id];
 		if(mod.executed) return mod.export;

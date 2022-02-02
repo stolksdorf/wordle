@@ -16,6 +16,7 @@ global.css.Main = css`
 
 	.Main{
 		position: relative;
+		padding-bottom: 2em;
 
 		aside{
 			text-align: right;
@@ -26,50 +27,10 @@ global.css.Main = css`
 			button{
 				display: block;
 			}
+		}
 
-			textarea{
-				background-color: white;
-			}
-
-			.generator{
-				text-align: left;
-				width: 250px;
-				//border: 1px solid red;
-				margin-bottom: 1em;
-
-				input{
-					background-color: white;
-					width: 100%;
-					border-color: black;
-					color: black;
-				}
-
-				label{
-					//font-weight:800;
-					font-size: 0.75em;
-					//text-transform:uppercase;
-					display: block;
-				}
-
-				textarea{
-					width: 100%;
-					resize: none;
-					color: black;
-				}
-
-				a{
-					color: blue;
-					font-size:0.8em;
-				}
-			}
-
-			textarea.results{
-				resize: none;
-				text-align: right;
-				border: none;
-
-				height:14em;
-			}
+		.Keyboard{
+			margin-top: 1em;
 		}
 
 
@@ -147,33 +108,10 @@ const getTargetFromURL = ()=>{
 };
 
 
+const Keyboard = require('./keyboard.js');
+const Generator = require('./generator.js');
+const Share = require('./share.js');
 
-const Generator = comp(function(){
-	const [word, setWord] = this.useState('');
-	const [hint, setHint] = this.useState('');
-
-	let code = btoa(word + (hint ? '|' + hint : ''));
-	let url = '';
-	if(typeof window !== 'undefined'){
-		url = window.location.origin + window.location.pathname + '?' + code;
-	}
-	return x`<div class='generator'>
-		<label>Word</label>
-		<input type='text' oninput=${(evt)=>setWord(evt.target.value)} value=${word}></input>
-		<label>Title</label>
-		<textarea oninput=${(evt)=>setHint(evt.target.value)} value=${hint}></textarea>
-		<a href=${url}>${url}</a>
-	</div>`
-
-
-});
-
-const getEmojiResult = (guesses)=>{
-	const mapping = {y : '🟩',c : '🟨',n : '⬜'};
-	return guesses.map(([word, status])=>{
-		return status.split('').map(code=>mapping[code]).join('');
-	}).join('\n');
-};
 
 
 const Main = comp(function(){
@@ -219,16 +157,19 @@ const Main = comp(function(){
 
 	const handleKey = (evt)=>{
 		if(evt.ctrlKey) return;
-		if(hasWon) return;
-
-		if(evt.key == 'Enter' && current.length == target.length){
-			addGuess(current);
-		}else if(evt.key == 'Backspace'){
-			setCurrent(current.slice(0, -1));
-		}else if(evt.key.length === 1 && current.length < target.length){
-			setCurrent(current + evt.key.toLowerCase());
-		}
+		addKeyPress(evt.key);
 	};
+
+	const addKeyPress = (key)=>{
+		if(hasWon) return;
+		if(key == 'Enter' && current.length == target.length){
+			addGuess(current);
+		}else if(key == 'Backspace'){
+			setCurrent(current.slice(0, -1));
+		}else if(key.length === 1 && current.length < target.length){
+			setCurrent(current + key.toLowerCase());
+		}
+	}
 
 	const win = ()=>{
 		Party.confetti(document.querySelector('.row.current'), {
@@ -243,9 +184,12 @@ const Main = comp(function(){
 	return x`<div class='Main'>
 		<div class='content'>
 			${hint && x`<h3 class='hint'>${hint}</h3>`}
-			${guesses.map(([word, status])=>Row(target.length, word, status))}
-			${Row(target.length, current, [], 'current')}
-			${times(target.length - guesses.length, ()=>Row(target.length, ''))}
+			<div class='rows'>
+				${guesses.map(([word, status])=>Row(target.length, word, status))}
+				${Row(target.length, current, [], 'current')}
+				${times(target.length - guesses.length, ()=>Row(target.length, ''))}
+			</div>
+			${Keyboard(guesses, addKeyPress)}
 		</div>
 
 		<aside>
@@ -253,7 +197,7 @@ const Main = comp(function(){
 			${showGenerator && Generator()}
 
 			<button onclick=${()=>setShowResults(!showResults)}>${showResults ? 'Hide' : 'Show'} Results</button>
-			${showResults && x`<textarea class='results'>${getEmojiResult(guesses)}</textarea>`}
+			${showResults && Share(guesses)}
 		</aside>
 	</div>`;
 });
