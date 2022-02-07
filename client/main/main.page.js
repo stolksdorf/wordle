@@ -120,8 +120,6 @@ const Main = comp(function(){
 
 	const [guesses, setGuesses] = this.useState([]);
 	const [current, setCurrent] = this.useState('');
-	const [foobar, setFoobar] = this.useState();
-
 
 	const [showGenerator, setShowGenerator] = this.useState(false);
 	const [showResults, setShowResults] = this.useState(false);
