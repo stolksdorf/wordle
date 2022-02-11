@@ -80,13 +80,7 @@ global.css.Main = css`
 
 const times = (n,fn)=>{let res=[];for(let i=0;i<n;i++){res.push(fn(i))};return res;};
 
-const FiveWordList = require('./5_word_list.js');
-
-const getWordOfDay = ()=>{
-	const now = (new Date());
-	const idx = (now.getYear() + now.getMonth()*100 + now.getDay()) % FiveWordList.length;
-	return FiveWordList[idx];
-};
+const getWordOfDay = require('./get_word.js');
 
 
 const Row = (len, word, status=[], _class='')=>{
